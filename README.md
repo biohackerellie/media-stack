@@ -50,4 +50,21 @@ services:
     ports:
       - 9117:9117
     restart: unless-stopped
+    
+   deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Denver
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /path/to/deluge/config:/config
+      - /path/to/your/downloads:/downloads
+    ports:
+      - 8112:8112
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped
 ```
