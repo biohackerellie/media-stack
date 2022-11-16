@@ -1,7 +1,7 @@
 # media-stack
 Simple docker-compose file combining sonarr radarr and jacket into a single stack with mounted volumes
 Adjust as needed, and share updates if you want, I'm new at this so always looking to improve :) 
-
+```
 ---
 version: "2.1"
 services:
@@ -50,3 +50,4 @@ services:
     ports:
       - 9117:9117
     restart: unless-stopped
+```
